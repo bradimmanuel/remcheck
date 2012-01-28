@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>RemCheck2</title>
+<script language="JavaScript" src="datepicker.js" type="text/javascript"></script>
+<link href="datepicker.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+}
+
+h4 {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: bold;
+}
+</style>
+<body>
+<h4>RemCheck</h4>
+<form action="processcheck.php" method="post"> 
+
+<!--Submitted or Closed? <select name="Status">
+<option>Submitted</option>
+<option>Closed</option>
+</select>
+<br>
+<br>-->
+
+Consultant Name:
+<select name="Consultant">
+<option>All CRC</option>
+<option>H&S</option>
+<option>Big Dogs</option>
+<option>PitCrew</option>
+<option>---------------</option>
+<option>Aj Romey</option>
+<option>Anthony Hom</option>
+<option>Alexander Tayts</option>
+<option>Bob Gallardo</option>
+<option>Brian Palermo</option>
+<option>Brian Wankel</option>
+<option>David Acoba</option>
+<option>Dodi Lota</option>
+<option>Gaby Rodriguez</option>
+<option>George Dias</option>
+<option>Greg Smith</option>
+<option>Jay Heyman</option>
+<option>Jeremy Fife</option>
+<option>Jeremy Tavan</option>
+<option>John Nelson</option>
+<option>Jon McDermott</option>
+<option>Jonathan Parungao</option>
+<option>Kevin Tai</option>
+<option>Martin Parkhurst</option>
+<option>MaryAnn Woodall</option>
+<option>Mike Birdwell</option>
+<option>Noah Abrahamson</option>
+<option>Robin McClish</option>
+<option>Rodney Carter</option>
+<option>Russell Scheil</option>
+<option>Sam Ablao</option>
+<option>Sam Kim</option>
+<option>Shahn Karp</option>
+<option>Tom Chou</option>
+<option>Troy Hernandez</option>
+<option>Tyler Cooper</option>
+<option>Varun Tansuwan</option>
+<option>Will Alfonso</option>
+<option>William Mingle</option>
+<option>William Wong</option>
+
+</select>
+<br>
+<br>
+Start Date: <input type="text" name="StartDate" id="StartDate" readonly onClick="GetDate(this);" />
+End Date: <input type="text" name="EndDate" id="EndDate" readonly onClick="GetDate(this);" />
+<br>
+<br>
+<!--Office Hours Included? <select name="OfficeHours">
+<option>Yes</option>
+<option>No</option>
+</select>
+<br><br>-->
+Field (s) to Check? <select name="Fields">
+<option>All</option>
+<option>Incident Type*</option>
+<option>Operational Categorization Tier 1</option>
+<option>Operational Categorization Tier 2</option>
+<option>Operational Categorization Tier 3</option>
+<option>Resolution</option>
+<option>Resolution Method</option>
+</select>
+<br><br>
+Filled out or left empty? <select name="Empty">
+<option>Complete</option>
+<option>Empty</option>
+</select>
+<br>
+<br>
+<input type="submit" value="Generate" />
+</form>
+</body></html>
