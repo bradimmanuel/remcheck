@@ -10,7 +10,7 @@ include_once("../crcw/inc/int-topbar.php");
   <div class="container left">
   	<div class="content">
 <h1>RemCheck</h1>
-<form action="processcheck.php" method="post" id="remForm"> 
+<form id="remForm"> 
 
 <!--Submitted or Closed? <select name="Status">
 <option>Submitted</option>
@@ -88,20 +88,66 @@ include_once("../crcw/inc/int-topbar.php");
 <br><br>
 <label for="Empty">Completed or Empty?</label> <div class="input"><select name="Empty" id="Empty">
 <option>Complete</option>
-<option>Empty</option>
+<option selected>Empty</option>
 </select></div>
 <br />
 <br />
-</fieldset>
 <div class="row">
 	<div class="span2 offset9">
 		<input id="submit" type="submit" class="btn primary" value="Generate" />
 	</div>
 </div>
+</fieldset>
 </form>
+<div id="theresults"></div>
+<script>
+$(function(){
+    $("#remForm").submit(function(e){
+       e.preventDefault();
+
+		if ( $("#StartDate").val() < 1 || $("#EndDate").val() < 1 )
+		{
+			$(".help-inline").remove();
+			if ( $("#StartDate").val() < 1 ) {
+			$("#StartDate").after( '<span class="help-inline" style="color: red;"> start date required</span>' );
+			}
+			if ( $("#EndDate").val() < 1 ) {
+			$("#EndDate").after( '<span class="help-inline" style="color: red;"> end date required</span>' );
+			}
+		}
+		else if ( $("#StartDate").val() > $("#EndDate").val() )
+		{
+			$(".help-inline").remove();
+			$("#EndDate").after( '<span class="help-inline" style="color: red;"> end date is before start date</span>' );
+		}
+		else
+		{
+
+        dataString = $("#remForm").serialize();
+
+        $.ajax({
+        type: 'get',
+        url: 'processcheck.php',
+        data: dataString,
+        dataType: "html",
+        success: function(data) {
+        
+			var shah = '&nbsp;<br /><hr>&nbsp;<br /><h2>Results</h2>&nbsp;<br /><p>Paste the following text directly into the Remedy client Advanced Search field.</p><pre>' + $( data ).contents().find('pre').text() + '</pre>';
+			$(".help-inline").remove();
+            $('#theresults').empty().append( shah );
+
+        	}
+        });         
+        } 
+
+    });
+});
+</script>
+
 </div>
 </div>
 <?php
-include_once("http://www.stanford.edu/dept/crc/cgi-bin/crcw/inc/int-footer.php");
+//include_once("../../crcw_proj/crcw/inc/int-footer.php");
+include_once("../crcw/inc/int-footer.php");
 
 ?>

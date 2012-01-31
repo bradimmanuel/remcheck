@@ -8,16 +8,16 @@ include_once("../crcw/inc/int-header.php"); #path for PROD
 include_once("../crcw/inc/int-topbar.php");
 
 #Set varibles from data submitted on form.
-$Consultant = $_POST['Consultant'];
-$StartDate = $_POST['StartDate'];
-$EndDate = $_POST['EndDate'];
-#$OfficeHours = $_POST['OfficeHours'];
+$Consultant = $_GET['Consultant'];
+$StartDate = $_GET['StartDate'];
+$EndDate = $_GET['EndDate'];
+#$OfficeHours = $_GET['OfficeHours'];
 #$Status = 'Closed' ;
-#$OpCat = $_POST['OpCat'];
-$Fields = $_POST['Fields'];
+#$OpCat = $_GET['OpCat'];
+$Fields = $_GET['Fields'];
 $string=nl2br($string);
 
-$Empty = $_POST['Empty'] ;
+$Empty = $_GET['Empty'] ;
 
 #if ( $Status == "Closed" ) {
 #$action = 'forgot to fill out at least one required field' ;
@@ -127,7 +127,7 @@ $FieldNameSpace = "" ;
 
 //echo "This search string will find closed or resolved tickets " . $ConsultantNameProse . " " . $action ." " . between ." ". $StartDate . " and " . $EndDate . "" . $ohprose . "<br><br>" ;
 
-echo '  <div class="container left"><div class="content"><h1>RemCheck Results</h1><pre>' . $Resolvedstart . "" . $SubmitStart . "" . $StartDate . "" . $Resolvedmid . "" . $SubmitMid . "" . $EndDate . "" . $ResolvedEnd . "" . $SubmitEnd . "" . $oh . "" . $ConsultantStringStart . "" . $ConsultantName . "" . $ConsultantStringEnd . "" . $FieldStringStart . "" . $FieldName . "" . $FieldStringEnd . '</pre>&nbsp;<br /><h2>Instructions</h2>&nbsp;<br /><center><img src="howto-search.png"></center>&nbsp;<br /><form action="index.php"><input class="btn small" type="submit" value="Go Back" /></form></div></div>' ;
+echo '<div class="container left"><div class="content"><h1>RemCheck Results</h1><pre>' . $Resolvedstart . "" . $SubmitStart . "" . $StartDate . "" . $Resolvedmid . "" . $SubmitMid . "" . $EndDate . "" . $ResolvedEnd . "" . $SubmitEnd . "" . $oh . "" . $ConsultantStringStart . "" . $ConsultantName . "" . $ConsultantStringEnd . "" . $FieldStringStart . "" . $FieldName . "" . $FieldStringEnd . '</pre>&nbsp;<br /><h2>Instructions</h2>&nbsp;<br /><center><img src="howto-search.png"></center>&nbsp;<br /><form action="index.php"><input class="btn small" type="submit" value="Go Back" /></form></div></div>' ;
 
 
 include_once("../crcw/inc/int-footer.php");
