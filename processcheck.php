@@ -1,20 +1,18 @@
-<html>
-<head><title>Remedy Record Checker Search String Generator</title></head>
-<style type="text/css">
-body {
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-   font-weight: 300;
-}
-</style>
-
-<body>
 <?php
+$titleHeader = "RemCheck - Advanced Search Code";
+
+//include_once("../../crcw_proj/crcw/inc/int-header.php"); #path for DEV
+//include_once("../../crcw_proj/crcw/inc/int-topbar.php");
+
+include_once("../crcw/inc/int-header.php"); #path for PROD
+include_once("../crcw/inc/int-topbar.php");
+
 #Set varibles from data submitted on form.
 $Consultant = $_POST['Consultant'];
 $StartDate = $_POST['StartDate'];
 $EndDate = $_POST['EndDate'];
-$OfficeHours = $_POST['OfficeHours'];
-$Status = 'Closed' ;
+#$OfficeHours = $_POST['OfficeHours'];
+#$Status = 'Closed' ;
 #$OpCat = $_POST['OpCat'];
 $Fields = $_POST['Fields'];
 $string=nl2br($string);
@@ -127,11 +125,10 @@ $FieldNameProse = "" ;
 $FieldNameSpace = "" ;
 }
 
-echo "This search string will find closed or resolved tickets " . $ConsultantNameProse . " " . $action ." " . between ." ". $StartDate . " and " . $EndDate . "" . $ohprose . "<br><br>" ;
+//echo "This search string will find closed or resolved tickets " . $ConsultantNameProse . " " . $action ." " . between ." ". $StartDate . " and " . $EndDate . "" . $ohprose . "<br><br>" ;
 
-echo "" . $Resolvedstart . "" . $SubmitStart . "" . $StartDate . "" . $Resolvedmid . "" . $SubmitMid . "" . $EndDate . "" . $ResolvedEnd . "" . $SubmitEnd . "" . $oh . "" . $ConsultantStringStart . "" . $ConsultantName . "" . $ConsultantStringEnd . "" . $FieldStringStart . "" . $FieldName . "" . $FieldStringEnd . "" ;
+echo '  <div class="container left"><div class="content"><h1>RemCheck Results</h1><pre>' . $Resolvedstart . "" . $SubmitStart . "" . $StartDate . "" . $Resolvedmid . "" . $SubmitMid . "" . $EndDate . "" . $ResolvedEnd . "" . $SubmitEnd . "" . $oh . "" . $ConsultantStringStart . "" . $ConsultantName . "" . $ConsultantStringEnd . "" . $FieldStringStart . "" . $FieldName . "" . $FieldStringEnd . '</pre><form action="index.php"><input class="btn small" type="submit" value="Go Back" /></form></div></div>' ;
 
 
-
+include_once("../../crcw_proj/crcw/inc/int-header.php");
 ?>
-</body></html>
