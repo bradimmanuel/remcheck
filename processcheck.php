@@ -127,7 +127,7 @@ $FieldNameSpace = "" ;
 
 //echo "This search string will find closed or resolved tickets " . $ConsultantNameProse . " " . $action ." " . between ." ". $StartDate . " and " . $EndDate . "" . $ohprose . "<br><br>" ;
 
-echo '  <div class="container left"><div class="content"><h1>RemCheck Results</h1><pre>' . $Resolvedstart . "" . $SubmitStart . "" . $StartDate . "" . $Resolvedmid . "" . $SubmitMid . "" . $EndDate . "" . $ResolvedEnd . "" . $SubmitEnd . "" . $oh . "" . $ConsultantStringStart . "" . $ConsultantName . "" . $ConsultantStringEnd . "" . $FieldStringStart . "" . $FieldName . "" . $FieldStringEnd . '</pre><form action="index.php"><input class="btn small" type="submit" value="Go Back" /></form></div></div>' ;
+echo '  <div class="container left"><div class="content"><h1>RemCheck Results</h1><pre>' . $Resolvedstart . "" . $SubmitStart . "" . $StartDate . "" . $Resolvedmid . "" . $SubmitMid . "" . $EndDate . "" . $ResolvedEnd . "" . $SubmitEnd . "" . $oh . "" . $ConsultantStringStart . "" . $ConsultantName . "" . $ConsultantStringEnd . "" . $FieldStringStart . "" . $FieldName . "" . $FieldStringEnd . '</pre>&nbsp;<br /><h2>Instructions</h2>&nbsp;<br /><center><img src="howto-search.png"></center>&nbsp;<br /><form action="index.php"><input class="btn small" type="submit" value="Go Back" /></form></div></div>' ;
 
 
 include_once("../../crcw_proj/crcw/inc/int-header.php");
