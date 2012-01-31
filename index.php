@@ -7,9 +7,11 @@ $jsHeader = '<link href="datepicker.css" rel="stylesheet" />';
 include_once("../crcw/inc/int-header.php"); #path for PROD
 include_once("../crcw/inc/int-topbar.php");
 ?>
+
   <div class="container left">
   	<div class="content">
 <h1>RemCheck</h1>
+<div class="well">
 <form id="remForm"> 
 
 <!--Submitted or Closed? <select name="Status">
@@ -67,8 +69,8 @@ include_once("../crcw/inc/int-topbar.php");
 </select></div>
 <br>
 <br>
-<label for="StartDate">Start Date:</label> <div class="input"><input type="text" name="StartDate" id="StartDate" readonly onClick="GetDate(this);" /></div><br />
-<label for="EndDate">End Date:</label> <div class="input"><input type="text" name="EndDate" id="EndDate" readonly onClick="GetDate(this);" /></div>
+<label for="StartDate">Start Date:<span style="color: red;">*</span></label> <div class="input"><input type="text" name="StartDate" id="StartDate" readonly onClick="GetDate(this);" /></div><br />
+<label for="EndDate">End Date:<span style="color: red;">*</span></label> <div class="input"><input type="text" name="EndDate" id="EndDate" readonly onClick="GetDate(this);" /></div>
 <br>
 <br>
 <!--Office Hours Included? <select name="OfficeHours">
@@ -90,7 +92,7 @@ include_once("../crcw/inc/int-topbar.php");
 <option>Complete</option>
 <option selected>Empty</option>
 </select></div>
-<br />
+</div>
 <br />
 <div class="row">
 	<div class="span2 offset9">
@@ -99,7 +101,6 @@ include_once("../crcw/inc/int-topbar.php");
 </div>
 </fieldset>
 </form>
-<div id="theresults"></div>
 <script>
 $(function(){
     $("#remForm").submit(function(e){
@@ -132,10 +133,15 @@ $(function(){
         dataType: "html",
         success: function(data) {
         
-			var shah = '&nbsp;<br /><hr>&nbsp;<br /><h2>Results</h2>&nbsp;<br /><p>Paste the following text directly into the Remedy client Advanced Search field.</p><pre>' + $( data ).contents().find('pre').text() + '</pre>';
+			var shah = '<pre>' + $( data ).contents().find('pre').text() + '</pre>';
 			$(".help-inline").remove();
+			
             $('#theresults').empty().append( shah );
-
+            $('#mymodal').modal({
+				show : true,
+				keyboard : true,
+				backdrop : true
+			});
         	}
         });         
         } 
@@ -143,6 +149,17 @@ $(function(){
     });
 });
 </script>
+
+<div id="mymodal" class="modal fade">
+	<div class="modal-header">
+		<h2>RemCheck Results</h2>
+	</div>
+	<div class="modal-body">
+	Paste the following code into a Remedy advanced search.<br />
+	    <p><div id="theresults"></div></p>
+	</div>
+</div>
+
 
 </div>
 </div>
