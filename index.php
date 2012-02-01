@@ -1,7 +1,5 @@
 <?php
 $titleHeader = "RemCheck";
-$cssHeader = '<script language="JavaScript" src="datepicker.js" type="text/javascript"></script>';
-$jsHeader = '<link href="datepicker.css" rel="stylesheet" />';
 //include_once("../../crcw_proj/crcw/inc/int-header.php"); #path for DEV
 //include_once("../../crcw_proj/crcw/inc/int-topbar.php");
 include_once("../crcw/inc/int-header.php"); #path for PROD
@@ -69,8 +67,10 @@ include_once("../crcw/inc/int-topbar.php");
 </select></div>
 <br>
 <br>
-<label for="StartDate">Start Date:<span style="color: red;">*</span></label> <div class="input"><input type="text" name="StartDate" id="StartDate" readonly onClick="GetDate(this);" /></div><br />
-<label for="EndDate">End Date:<span style="color: red;">*</span></label> <div class="input"><input type="text" name="EndDate" id="EndDate" readonly onClick="GetDate(this);" /></div>
+<div class="inline-inputs">
+<label for="StartDate">Start Date:<span style="color: red;">*</span></label> <div class="input"><input data-datepicker="datepicker" class="small" type="text"  name="StartDate" id="StartDate" readonly /></div><br />
+<label for="EndDate">End Date:<span style="color: red;">*</span></label> <div class="input"><input data-datepicker="datepicker" class="small" type="text" name="EndDate" id="EndDate" readonly /></div>
+</div>
 <br>
 <br>
 <!--Office Hours Included? <select name="OfficeHours">
@@ -159,7 +159,31 @@ $(function(){
 	    <p><div id="theresults"></div></p>
 	</div>
 </div>
-
+    <script>
+      /* Update datepicker plugin so that MM/DD/YYYY format is used. */
+      $.extend($.fn.datepicker.defaults, {
+        parse: function (string) {
+          var matches;
+          if ((matches = string.match(/^(\d{2,2})\/(\d{2,2})\/(\d{4,4})$/))) {
+            return new Date(matches[3], matches[1] - 1, matches[2]);
+          } else {
+            return null;
+          }
+        },
+        format: function (date) {
+          var
+            month = (date.getMonth() + 1).toString(),
+            dom = date.getDate().toString();
+          if (month.length === 1) {
+            month = "0" + month;
+          }
+          if (dom.length === 1) {
+            dom = "0" + dom;
+          }
+          return month + "/" + dom + "/" + date.getFullYear();
+        }
+      });  
+    </script>
 
 </div>
 </div>
