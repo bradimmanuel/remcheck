@@ -33,6 +33,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>H&S</option>
 <option>Big Dogs</option>
 <option>PitCrew</option>
+<option>Server Team</option>
 <option>---------------</option>
 <option>Aj Romey</option>
 <option>Anthony Hom</option>

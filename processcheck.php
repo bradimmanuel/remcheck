@@ -55,6 +55,15 @@ $SubmitEnd = '' ;
 #$SubmitEnd = ' 5:00:00 PM") ' ;
 #}
 
+if ( $Consultant == "Server Team" ) {
+$ConsultantStringStart = ' AND ' ;
+$ConsultantStringEnd = '' ;
+$ConsultantName = '(\'Assigned Group*+\' = "ITS * CRC Server Group")';
+$ConsultantNameProse = "the Server Team" ;  
+} else {
+
+
+
 if ( $Consultant == "All CRC" ) {
 $ConsultantStringStart = ' AND ' ;
 $ConsultantStringEnd = '' ;
