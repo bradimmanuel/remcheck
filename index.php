@@ -1,12 +1,10 @@
 <?php
-$titleHeader = "RemCheck";
+$crcw_header = array('datepicker','title' => 'CRC RemCheck');
 
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
-	include_once("../../crcw_proj/crcw/inc/int-header.php"); #path for DEV
-	include_once("../../crcw_proj/crcw/inc/int-topbar.php");
+	include_once("../../crcw_proj/crcw/inc/header.php"); #path for DEV
 } else {
-	include_once("../crcw/inc/int-header.php"); #path for PROD
-	include_once("../crcw/inc/int-topbar.php");
+	include_once("../crcw/inc/header.php"); #path for PROD
 }
 ?>
 
@@ -33,6 +31,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>H&S</option>
 <option>Big Dogs</option>
 <option>PitCrew</option>
+<option>Server Team</option>
 <option>---------------</option>
 <option>Aj Romey</option>
 <option>Anthony Hom</option>
