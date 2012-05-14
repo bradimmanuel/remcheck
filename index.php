@@ -30,7 +30,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>All CRC</option>
 <option>H&S</option>
 <option>Big Dogs</option>
-<option>PitCrew</option>
+<option>XST</option>
 <option>Server Team</option>
 <option>---------------</option>
 <option>Aj Romey</option>
@@ -50,6 +50,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>John Nelson</option>
 <option>Jon McDermott</option>
 <option>Jonathan Parungao</option>
+<option>Karen Zack</option>
 <option>Kevin Tai</option>
 <option>Martin Parkhurst</option>
 <option>MaryAnn Woodall</option>
