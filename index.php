@@ -28,7 +28,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <div class="control-group">
 <label class="control-label" for="Consultant">Group/Consultant:</label><div class="controls"><select name="Consultant" id="Consultant">
 <option>All CRC</option>
-<option>H&S</option>
+<option>IT Sharks</option>
 <option>Big Dogs</option>
 <option>XST</option>
 <option>Server Team</option>
