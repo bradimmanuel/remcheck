@@ -53,7 +53,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>Jon McDermott</option>
 <option>Jonathan Parungao</option>
 <option>Karen Zack</option>
-<option>Ken Chen</option>
+<option>Ken Chan</option>
 <option>Kevin Tai</option>
 <option>Kurt Thompson</option>
 <option>Martin Parkhurst</option>
