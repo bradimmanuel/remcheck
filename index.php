@@ -40,8 +40,6 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>Brian Palermo</option>
 <option>Brian Wankel</option>
 <option>David Acoba</option>
-<option>Dodi Lota</option>
-<option>Don Archuletta</option>
 <option>Gaby Rodriguez</option>
 <option>George Dias</option>
 <option>Greg Smith</option>
@@ -60,20 +58,21 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>MaryAnn Woodall</option>
 <option>Max Nguyen</option>
 <option>Mike Birdwell</option>
+<option>Michael Wakefield</option>
 <option>Noah Abrahamson</option>
 <option>Paul Abad</option>
+<option>Philip Bailey</option>
+<option>Philip Temiyasathit</option>
 <option>Robin McClish</option>
 <option>Rodney Carter</option>
 <option>Sam Ablao</option>
-<option>Sam Kim</option>
-<option>Shahn Karp</option>
-<option>Tom Chou</option>
+<option>Shannon Santanocito</option>
+<option>Tom Patterson</option>
 <option>Troy Hernandez</option>
 <option>Tyler Cooper</option>
 <option>Varun Tansuwan</option>
 <option>Will Alfonso</option>
 <option>William Mingle</option>
-<option>William Wong</option>
 
 </select></div></div>
 <br>
