@@ -29,7 +29,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <label class="control-label" for="Consultant">Group/Consultant:</label><div class="controls"><select name="Consultant" id="Consultant">
 <option>All CRC</option>
 <option>IT Sharks</option>
-<option>Big Dogs</option>
+<option>Badgers</option>
 <option>XST</option>
 <option>Server Team</option>
 <option>---------------</option>
@@ -41,6 +41,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>Brian Wankel</option>
 <option>David Acoba</option>
 <option>Gaby Rodriguez</option>
+<option>Gene Ren</option>
 <option>George Dias</option>
 <option>Greg Smith</option>
 <option>Jay Heyman</option>
@@ -67,6 +68,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 <option>Rodney Carter</option>
 <option>Sam Ablao</option>
 <option>Shannon Santanocito</option>
+<option>Todd Boyden</option>
 <option>Tom Patterson</option>
 <option>Troy Hernandez</option>
 <option>Tyler Cooper</option>

@@ -64,14 +64,14 @@ if ( $Consultant == "All CRC" ) {
 } elseif ( $Consultant == "XST" ) {
 	$ConsultantStringStart = ' AND ' ;
 	$ConsultantStringEnd = '' ;
-	$ConsultantName = '(\'Assignee+\' = "Karen Zack" OR \'Assignee+\' = "Maryann Woodall")' ;
+	$ConsultantName = '(\'Assignee+\' = "Karen Zack" OR \'Assignee+\' = "Jimmy Nguyen" OR \'Assignee+\' = "Gene Ren" OR \'Assignee+\' = "Todd Boyden" OR \'Assignee+\' = "Jimmy Nguyen")' ;
 	$ConsultantNameProse = "XST" ;
 	
-} elseif ($Consultant == "Big Dogs") {
+} elseif ($Consultant == "Badgers") {
 	$ConsultantStringStart = ' AND ' ;
 	$ConsultantStringEnd = '' ;
 	$ConsultantName = '(\'Assigned Group*+\' = "ITS * GLAM" OR \'Assigned Group*+\' = "ITS * Dean of Research" OR \'Assigned Group*+\' = "ITS * Athletics" OR \'Assigned Group*+\' = "ITS * CFO" OR \'Assigned Group*+\' = "ITS * Internal Audit" OR \'Assigned Group*+\' = "ITS * Nanofabrication" OR \'Assigned Group*+\' = "ITS * OPA" OR \'Assigned Group*+\' = "ITS * Research Admin" OR \'Assigned Group*+\' = "ITS * RiceHadley" OR \'Assigned Group*+\' = "ITS * Stanford Center on Longevity" OR \'Assigned Group*+\' = "ITS * UGA" OR \'Assigned Group*+\' = "ITS * Woods Institute" OR \'Assigned Group*+\' = "ITS * Global Climate" OR \'Assigned Group*+\' = "HR Computer Support" OR \'Assigned Group*+\' = "ITS * CSLI" OR \'Assigned Group*+\' = "ITS * EPGY" OR \'Assigned Group*+\' = "ITS * Earth Sciences"  OR \'Assigned Group*+\' = "ITS * HEPL" OR \'Assigned Group*+\' = "ITS * IT Services" OR \'Assigned Group*+\' = "ITS * Procurement" OR \'Assigned Group*+\' = "ITS * Research Compliance") AND NOT ( \'Assignee+\' = "Fred Broome" OR \'Assignee+\' = "Jamie Martinez" OR \'Assignee+\' = "Julie Reynolds-Grabbe" OR \'Assignee+\' = "Jennifer Honciano") AND NOT (\'Status*\' = "Cancelled")' ;
-	$ConsultantNameProse = "Big Dogs" ;
+	$ConsultantNameProse = "Badgers" ;
 #Bio-x Removed due to not tracking remedy tickets OR \'Assigned Group*+\' = "ITS * Bio-X" 
 } elseif ($Consultant == "IT Sharks") {
 	$ConsultantStringStart = ' AND ' ;
