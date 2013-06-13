@@ -39,8 +39,8 @@ $ohprose = ' excluding office hours tickets.' ;
 #set variables for creating the find string around the resolved date
 #if ( $Status == "Closed" ) {
 $Resolvedstart = '( \'Last Resolved Date\' >= "' ;
-$Resolvedmid = ' 8:00:00 AM") AND (\'Last Resolved Date\' <= "' ;
-$ResolvedEnd = ' 5:00:00 PM") ' ;
+$Resolvedmid = '") AND (\'Last Resolved Date\' <= "' ;
+$ResolvedEnd = '") ' ;
 $SubmitStart = '' ;
 $SubmitMid = '' ;
 $SubmitEnd = '' ;
